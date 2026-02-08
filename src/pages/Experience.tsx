@@ -48,41 +48,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;									>
-										View Certificate
-										<ExternalLink className="w-4 h-4" />
-									</motion.a>
-								</div>
-
-								<div className="relative hidden md:block">
-									<div className="absolute inset-0 group-hover:scale-105 transition-transform duration-500">
-										<img
-											src={exp.image}
-											alt={exp.company}
-											className="w-full h-full object-cover"
-										/>
-										<div className="absolute inset-0 bg-gradient-to-r from-gray-800/80 to-transparent group-hover:scale-105 transition-transform duration-500" />
-									</div>
-									<div className="relative h-full flex items-center justify-center">
-										<motion.a
-											href={exp.certificateUrl}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="px-8 py-3 text-white font-bold bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl flex items-center gap-2 transition-all duration-300 hover:scale-105 border border-white/10 hover:border-white/20"
-											whileHover={{ y: -5 }}
-										>
-											View Certificate
-											<ExternalLink className="w-4 h-4" />
-										</motion.a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</ScrollAnimation>
-				))}
-			</div>
-		</div>
-	);
-};
-
 export default Experience;
