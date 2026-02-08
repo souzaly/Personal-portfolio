@@ -12,14 +12,14 @@ const Navbar = () => {
 	const pathname = usePathname();
 
 	const navLinks = [
-		{ path: '/', label: 'Home' },
-		{ path: '/about', label: 'About' },
-		{ path: '/education', label: 'Education' },
-		{ path: '/experience', label: 'Experience' },
-		{ path: '/skills', label: 'Skills' },
-		{ path: '/projects', label: 'Projects' },
-		{ path: '/certificates', label: 'Certificates' },
-		{ path: '/contact', label: 'Contact' }
+		{ path: '/', label: 'Início'},
+		{ path: '/about', label: 'Sobre Mim' },
+		{ path: '/education', label: 'Educação' },
+		{ path: '/experience', label: 'Experiência' },
+		{ path: '/skills', label: 'Habilidades' },
+		{ path: '/projects', label: 'Projetos' },
+		{ path: '/certificates', label: 'Certificados' },
+		{ path: '/contact', label: 'Contato' }
 	];
 
 	return (
