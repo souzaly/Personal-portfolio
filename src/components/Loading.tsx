@@ -48,12 +48,12 @@ const Loading = () => {
 						ease: "easeInOut"
 					}}
 				>
-					Loading...
+					Carregando...
 				</motion.div>
 				<motion.div
 					className="text-sm text-white/50"
 				>
-					Please wait while we set things up
+					Por favor, aguarde enquanto configuramos tudo.
 				</motion.div>
 			</motion.div>
 		</div>
