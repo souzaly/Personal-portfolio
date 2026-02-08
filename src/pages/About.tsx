@@ -72,38 +72,17 @@ const About = () => {
 					</div>
 
 					<ScrollAnimation>
-						<div className="pt-4">
-							<h3 className="text-2xl font-semibold mb-4 gradient-text">
-								Fatos Rápidos
-							</h3>
-							<ul className="list-none space-y-3">
-								{[
-									"16 anos",
-									"Estudante autodidata em programação",
-									"Focado em desenvolvimento web"
-								].map((fact) => (
-									<motion.li
-										key={fact}
-										className="flex items-center space-x-2 text-gray-300"
-									>
-										<span className="w-2 h-2 bg-white rounded-full" />
-										<span>{fact}</span>
-									</motion.li>
-								))}
-							</ul>
-						</div>
-					</ScrollAnimation>
-
-					<ScrollAnimation>
 						<div className="flex justify-start space-x-4">
+							{/* Botão desativado */}
 							<a
-								href="/files/cv_pdf/Luan(CV).pdf"
-								target="_blank"
+								href="#"
 								rel="noopener noreferrer"
-								className="px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition-colors"
+								className="px-6 py-3 bg-white/30 text-black rounded-full font-medium cursor-not-allowed"
+								aria-disabled="true"
 							>
 								Baixar CV
 							</a>
+							{/* Botão ativo */}
 							<a
 								href="/skills"
 								className="px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-colors"
