@@ -14,27 +14,31 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: 'Niladri Chatterjee - Software Developer',
-	description: 'Niladri Chatterjee - Full Stack Developer specializing in MERN stack, React.js, Node.js, and modern web technologies. Expert in database development and web applications.',
-	keywords: 'Niladri Chatterjee, Niladri1, niladri1, Software Developer, Full Stack Developer, MERN Stack, Web Developer, React Developer, Next.js Expert, Database Developer, Frontend Specialist, Backend Developer, JavaScript Expert, TypeScript Developer, Node.js Developer, MongoDB Expert, SQL Developer',
-	authors: [{ name: 'Niladri Chatterjee' }],
-	creator: 'Niladri Chatterjee',
+	title: 'Luan - Desenvolvedor de Software',
+	description:
+		'Luan - Desenvolvedor Full Stack especializado em MERN Stack, React.js, Node.js e tecnologias modernas da web. Experiência em desenvolvimento de bancos de dados e aplicações web.',
+	keywords:
+		'Luan, Desenvolvedor de Software, Desenvolvedor Full Stack, MERN Stack, Desenvolvedor Web, Desenvolvedor React, Especialista em Next.js, Desenvolvedor de Banco de Dados, Frontend, Backend, JavaScript, TypeScript, Node.js, MongoDB, SQL',
+	authors: [{ name: 'Luan' }],
+	creator: 'Luan',
 	manifest: '/manifest.json',
 	themeColor: '#000000',
 	viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
 	openGraph: {
 		type: 'website',
-		locale: 'en_US',
-		url: 'https://niladri1.vercel.app/',
-		title: 'Niladri Chatterjee - Full Stack Developer',
-		description: 'Full-stack developer specializing in MERN stack, React.js, Node.js, and modern web technologies.',
-		siteName: 'Niladri Chatterjee Portfolio',
+		locale: 'pt_BR',
+		url: 'https://seu-site.vercel.app/',
+		title: 'Luan - Desenvolvedor Full Stack',
+		description:
+			'Desenvolvedor Full Stack especializado em MERN Stack, React.js, Node.js e tecnologias modernas da web.',
+		siteName: 'Portfólio do Luan',
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Niladri Chatterjee - Full Stack Developer',
-		description: 'Full-stack developer specializing in MERN stack, React.js, Node.js, and modern web technologies.',
-		creator: '@niladri_dev',
+		title: 'Luan - Desenvolvedor Full Stack',
+		description:
+			'Desenvolvedor Full Stack especializado em MERN Stack, React.js, Node.js e tecnologias modernas da web.',
+		creator: '@luan_dev',
 	},
 	robots: {
 		index: true,
@@ -46,7 +50,7 @@ export const metadata: Metadata = {
 			noimageindex: true,
 		},
 	},
-	metadataBase: new URL('https://niladri1.vercel.app'),
+	metadataBase: new URL('https://seu-site.vercel.app'),
 	alternates: {
 		canonical: '/',
 	},
@@ -61,13 +65,22 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={inter.className}>
+		<html lang="pt-BR" className={inter.className}>
 			<head>
 				<link rel="shortcut icon" href="/nextjs.png" type="image/x-icon" />
 				<link rel="apple-touch-icon" href="/nextjs.png" />
 				<meta name="theme-color" content="#000000" />
 				<link rel="manifest" href="/manifest.json" />
-				<meta httpEquiv="Content-Security-Policy" content="default-src 'self' data: blob: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https: http:; font-src 'self' data: https:; connect-src 'self' data: blob: https:; worker-src 'self' blob: data:;" />
+				<meta
+					httpEquiv="Content-Security-Policy"
+					content="default-src 'self' data: blob: https:;
+					script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https:;
+					style-src 'self' 'unsafe-inline' https:;
+					img-src 'self' data: blob: https: http:;
+					font-src 'self' data: https:;
+					connect-src 'self' data: blob: https:;
+					worker-src 'self' blob: data:;"
+				/>
 			</head>
 			<body>
 				<div className="min-h-screen flex flex-col">
