@@ -6,52 +6,80 @@ import { Search, Command, ArrowRight } from 'lucide-react';
 
 const searchData = [
 	{
-		title: 'Home',
-		description: 'Go to the welcome page',
+		title: 'Início',
+		description: 'Ir para a página inicial',
 		path: '/',
-		keywords: ['home', 'cv', 'resume', 'start', 'welcome', 'portfolio', 'niladri', 'niladri chatterjee', 'niladri1', 'software developer', 'full stack developer', 'mern stack', 'web developer']
+		keywords: [
+			'início', 'home', 'cv', 'currículo', 'começar', 'bem-vindo',
+			'portfólio', 'niladri', 'niladri chatterjee', 'niladri1',
+			'desenvolvedor de software', 'full stack', 'mern', 'desenvolvedor web'
+		]
 	},
 	{
-		title: 'About',
-		description: 'Learn more about me and my background',
+		title: 'Sobre',
+		description: 'Saiba mais sobre mim e minha trajetória',
 		path: '/about',
-		keywords: ['about', 'background', 'education', 'bio', 'profile', 'cv', 'resume', 'niladri', 'chatterjee', 'full stack developer', 'software engineer', 'web developer']
+		keywords: [
+			'sobre', 'biografia', 'perfil', 'história', 'educação',
+			'currículo', 'niladri', 'chatterjee',
+			'full stack', 'engenheiro de software', 'desenvolvedor web'
+		]
 	},
 	{
-		title: 'Education',
-		description: 'View my educational background',
+		title: 'Educação',
+		description: 'Veja minha formação acadêmica',
 		path: '/education',
-		keywords: ['education', 'university', 'college', 'degree', 'school', 'board', 'computer science', 'engineering', 'b.tech', 'bengal college']
+		keywords: [
+			'educação', 'escola', 'ensino médio', 'formação',
+			'ciência da computação', 'engenharia'
+		]
 	},
 	{
-		title: 'Experience',
-		description: 'Check out my professional experience',
+		title: 'Experiência',
+		description: 'Confira minha experiência profissional',
 		path: '/experience',
-		keywords: ['experience', 'work', 'career', 'jobs', 'professional', 'internships', 'certificates', 'mern', 'web developer', 'full stack', 'software developer']
+		keywords: [
+			'experiência', 'trabalho', 'carreira', 'empregos',
+			'estágios', 'desenvolvedor', 'full stack', 'software'
+		]
 	},
 	{
-		title: 'Skills',
-		description: 'Explore my technical skills and expertise',
+		title: 'Habilidades',
+		description: 'Explore minhas habilidades técnicas',
 		path: '/skills',
-		keywords: ['skills', 'technologies', 'programming', 'languages', 'frameworks', 'web', 'development', 'software', 'tools', 'react', 'node', 'javascript', 'typescript', 'next.js', 'mongodb', 'sql']
+		keywords: [
+			'habilidades', 'tecnologias', 'programação', 'linguagens',
+			'frameworks', 'desenvolvimento', 'software',
+			'react', 'node', 'javascript', 'typescript', 'next.js', 'mongodb', 'sql'
+		]
 	},
 	{
-		title: 'Projects',
-		description: 'View my portfolio of projects',
+		title: 'Projetos',
+		description: 'Veja meus projetos e portfólio',
 		path: '/projects',
-		keywords: ['projects', 'portfolio', 'work', 'examples', 'github', 'code', 'open-source', 'web applications', 'full stack', 'mern stack', 'react', 'node']
+		keywords: [
+			'projetos', 'portfólio', 'trabalhos', 'github',
+			'código', 'open source', 'aplicações web',
+			'full stack', 'mern', 'react', 'node'
+		]
 	},
 	{
-		title: 'Certificates',
-		description: 'View my certifications and achievements',
+		title: 'Certificados',
+		description: 'Veja certificados e conquistas',
 		path: '/certificates',
-		keywords: ['certificates', 'certifications', 'achievements', 'courses', 'learning', 'skills', 'professional', 'development', 'awards', 'badges']
+		keywords: [
+			'certificados', 'certificações', 'conquistas',
+			'cursos', 'aprendizado', 'habilidades', 'desenvolvimento'
+		]
 	},
 	{
-		title: 'Contact',
-		description: 'Get in touch with me',
+		title: 'Contato',
+		description: 'Entre em contato comigo',
 		path: '/contact',
-		keywords: ['contact', 'email', 'message', 'connect', 'hire', 'freelance', 'work', 'collaboration', 'job', 'opportunity']
+		keywords: [
+			'contato', 'email', 'mensagem', 'conectar',
+			'trabalho', 'freelance', 'colaboração', 'oportunidade'
+		]
 	}
 ];
 
@@ -79,6 +107,7 @@ const SearchDialog = () => {
 				e.preventDefault();
 				setSelectedIndex(prev => (prev + 1) % results.length);
 			}
+
 			if (e.key === 'ArrowUp') {
 				e.preventDefault();
 				setSelectedIndex(prev => (prev - 1 + results.length) % results.length);
@@ -102,7 +131,9 @@ const SearchDialog = () => {
 				return (
 					item.title.toLowerCase().includes(searchLower) ||
 					item.description.toLowerCase().includes(searchLower) ||
-					item.keywords.some(keyword => keyword.toLowerCase().includes(searchLower))
+					item.keywords.some(keyword =>
+						keyword.toLowerCase().includes(searchLower)
+					)
 				);
 			});
 			setResults(filtered);
@@ -119,7 +150,7 @@ const SearchDialog = () => {
 				className="flex items-center space-x-2 px-3 py-1.5 text-gray-400 hover:text-white transition-colors bg-white/15 rounded-lg hover:bg-white/10"
 			>
 				<Search className="w-4 h-4" />
-				<span className="text-sm hidden sm:block">Search ...</span>
+				<span className="text-sm hidden sm:block">Pesquisar...</span>
 				<span className="hidden md:flex items-center space-x-1 px-1.5 py-0.5 text-xs bg-white/10 rounded">
 					<Command className="w-3 h-3" />
 					<span>K</span>
@@ -131,7 +162,10 @@ const SearchDialog = () => {
 	return (
 		<div className="fixed inset-0 z-50 overflow-y-auto">
 			<div className="min-h-screen px-4 text-center">
-				<div className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity" onClick={() => setIsOpen(false)} />
+				<div
+					className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
+					onClick={() => setIsOpen(false)}
+				/>
 
 				<div className="inline-block w-full max-w-2xl mt-24 text-left align-middle transition-all transform">
 					<div className="relative bg-gray-900 rounded-xl shadow-2xl">
@@ -139,7 +173,7 @@ const SearchDialog = () => {
 							<Search className="w-5 h-5 text-gray-400" />
 							<input
 								type="text"
-								placeholder="Search documentation..."
+								placeholder="Pesquisar no site..."
 								className="w-full px-4 py-4 text-white bg-transparent border-0 focus:outline-none focus:ring-0"
 								value={searchQuery}
 								onChange={(e) => setSearchQuery(e.target.value)}
@@ -153,26 +187,34 @@ const SearchDialog = () => {
 						<div className="max-h-[60vh] overflow-y-auto">
 							{results.length === 0 ? (
 								<div className="p-4 text-sm text-gray-400">
-									No results found.
+									Nenhum resultado encontrado.
 								</div>
 							) : (
 								<div className="py-2">
 									{results.map((result, index) => (
 										<button
 											key={result.path}
-											className={`w-full px-4 py-3 text-left hover:bg-white/5 flex items-center justify-between ${index === selectedIndex ? 'bg-white/10' : ''
-												}`}
+											className={`w-full px-4 py-3 text-left hover:bg-white/5 flex items-center justify-between ${
+												index === selectedIndex ? 'bg-white/10' : ''
+											}`}
 											onClick={() => {
 												router.push(result.path);
 												setIsOpen(false);
 											}}
 										>
 											<div>
-												<div className="text-white font-medium">{result.title}</div>
-												<div className="text-sm text-gray-400">{result.description}</div>
+												<div className="text-white font-medium">
+													{result.title}
+												</div>
+												<div className="text-sm text-gray-400">
+													{result.description}
+												</div>
 											</div>
-											<ArrowRight className={`w-4 h-4 text-gray-400 ${index === selectedIndex ? 'opacity-100' : 'opacity-0'
-												}`} />
+											<ArrowRight
+												className={`w-4 h-4 text-gray-400 ${
+													index === selectedIndex ? 'opacity-100' : 'opacity-0'
+												}`}
+											/>
 										</button>
 									))}
 								</div>
