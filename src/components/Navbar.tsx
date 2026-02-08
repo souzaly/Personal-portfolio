@@ -12,7 +12,7 @@ const Navbar = () => {
 	const pathname = usePathname();
 
 	const navLinks = [
-		{ path: '/', label: 'Início'},
+		{ path: '/', label: 'Início' },
 		{ path: '/about', label: 'Sobre Mim' },
 		{ path: '/education', label: 'Educação' },
 		{ path: '/experience', label: 'Experiência' },
