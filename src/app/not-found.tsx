@@ -47,7 +47,7 @@ export default function NotFound() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.3 }}
 					>
-						Page Not Found
+						Página não encontrada
 					</motion.h2>
 				</ScrollAnimation>
 
@@ -58,7 +58,7 @@ export default function NotFound() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.4 }}
 					>
-						Oops! The page you're looking for seems to have vanished into the digital void.
+						Ops! A página que você está procurando parece ter se perdido no vazio digital.
 					</motion.p>
 				</ScrollAnimation>
 
@@ -73,7 +73,7 @@ export default function NotFound() {
 							className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition-colors group"
 						>
 							<Home className="w-5 h-5 group-hover:scale-110 transition-transform" />
-							<span>Back to Home</span>
+							<span>Voltar para o início</span>
 						</Link>
 					</motion.div>
 				</ScrollAnimation>
